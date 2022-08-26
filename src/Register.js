@@ -1,6 +1,7 @@
 import {useState, useContext} from 'react';
 import axios from 'axios';
 import UserContext from "./UserContext";
+import { Link } from "react-router-dom";
 
 function Register() {
 
@@ -24,7 +25,7 @@ function Register() {
   }
 
   if (Navigate) {
-    return <Navigate to={'/'} />
+    return <Link to={'/'} />
   }
 
   return (

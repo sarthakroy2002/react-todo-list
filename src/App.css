@@ -21,7 +21,7 @@ nav a{
 
 main{
   width: 1500px;
-  height: 700px;
+  min-height: 700px;
   margin: 10px auto;
   text-align: center;
   background: #434370;

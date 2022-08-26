@@ -4,7 +4,7 @@ import axios from "axios";
 
 function Home() {
   const userInfo = useContext(UserContext);
-  const [inputVal, setInputVal] = useState('');
+  const [inputVal, setInputVal] = useState(' ');
   const [todos,setTodos] = useState([]);
 
   useEffect(() => {
@@ -28,6 +28,20 @@ function Home() {
 
   }
 
+  function updateTodo(todo) {
+    const data = {id:todo._id,done:!todo.done};
+    axios.post('/todos', data, {withCredentials:true})
+      .then(() => {
+        const newTodos = todos.map(t => {
+          if (t._id === todo._id) {
+            t.done = !t.done;
+          }
+          return t;
+        });
+        setTodos([...newTodos]);
+      });
+  }
+
   return <div>
     <form onSubmit={e => addTodo(e)}>
       <input id='maintxtbox'
@@ -39,6 +53,10 @@ function Home() {
     <ul>
       {todos.map(todo => (
         <li>
+          <input type={'checkbox'}
+                 checked={todo.done}
+                 onClick={() => updateTodo(todo)}
+          />
           {todo.done ? <del>{todo.text}</del> : todo.text}
         </li>
       ))}
