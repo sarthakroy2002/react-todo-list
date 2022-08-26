@@ -1,0 +1,113 @@
+body{
+  background: #181830;
+  color: #D1D1D4;
+}
+nav{
+  text-align: right;
+  padding-right: 120px;
+}
+
+nav a{
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  color: #D1D1D4;
+}
+
+#head{
+  display: inline;
+  padding-right: 1200px;
+}
+
+main{
+  width: 1500px;
+  height: 700px;
+  margin: 10px auto;
+  text-align: center;
+  background: #434370;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.1);
+  transition: 0.5s;
+}
+
+main:hover{
+  width: 1505px;
+  height: 705px;
+  background: #3a3a61;
+}
+
+ul{
+  padding-left:0;
+}
+
+ul li{
+  display: block;
+  padding-bottom: 12px;
+
+}
+
+#maintxtbox{
+  width: 1000px;
+  height: 50px;
+  font-size: medium;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+#maintxtbox:hover, #maintxtbox:active{
+  width: 1005px;
+  height: 55px;
+}
+
+.noter{
+  font-size: 14px;
+	border-radius: 12px;
+  background: #3D1C4E; 
+  border: none;
+	align-items: center;
+	width: 140px;
+  height: 50px;
+	color: #D1D1D4;
+	cursor: pointer;
+	margin-top: 30px;
+	transition: 0.5s;
+	margin: 5px;
+}
+
+.txter{
+  width: 400px;
+  height: 50px;
+  font-size: medium;
+  border-radius: 10px; 
+}
+
+.recc{
+  margin-top: 20px;
+}
+
+.boxer{
+  margin-top: 150px;
+}
+
+.recc:hover{
+	width: 135px;
+  height: 55px;
+}
+
+.okh:hover{
+	width: 135px;
+  height: 55px;
+  background: #8a0909; 
+}
+
+.addnoter:hover{
+	width: 135px;
+  height: 55px;
+  background: rgb(1, 99, 1);
+}
+
+.tmpr:hover{
+	width: 135px;
+  height: 55px;
+}
