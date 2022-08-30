@@ -6,6 +6,7 @@ import UserContext from "./UserContext";
 import axios from "axios";
 import Login from "./Login";
 import Home from "./Home";
+import Calender from "./Calender";
 
 function App() {
   const [email,setEmail] = useState('');
@@ -28,15 +29,18 @@ function App() {
       <BrowserRouter>
         <nav>
           <h1 id='head'><Link to={'/'}>To-Do-List</Link></h1>
-          <Link to={'/'}>Home</Link>
+          <Link to={'/'}><logoi>Home</logoi></Link>
           {!email && (
             <>
-              <Link to={'/login'}>Login</Link>
-              <Link to={'/register'}>Register</Link>
+              <Link to={'/login'}><logoi>Login</logoi></Link>
+              <Link to={'/register'}><button className='registerr'>Register</button></Link>
             </>
           )}
           {!!email && (
-            <button className='noter okh' onClick={e => {e.preventDefault();logout();}}>Logout</button>
+            <>
+              <Link to={'/cal'}><logoi>Calendar</logoi></Link>
+              <button className='noter okh' onClick={e => {e.preventDefault();logout();}}>Logout</button>
+            </>
           )}
         </nav>
         <main>
@@ -44,6 +48,7 @@ function App() {
             <Route exact path={'/'} element={<Home />} />
             <Route exact path={'/register'} element={<Register />} />
             <Route exact path={'/login'} element={<Login />} />
+            <Route exact path={'/cal'} element={<Calender />} />
           </Routes>
         </main>
       </BrowserRouter>

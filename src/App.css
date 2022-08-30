@@ -16,7 +16,7 @@ nav a{
 
 #head{
   display: inline;
-  padding-right: 1200px;
+  padding-right: 1000px;
 }
 
 main{
@@ -110,4 +110,31 @@ ul li{
 .tmpr:hover{
 	width: 135px;
   height: 55px;
+}
+
+.registerr{
+  font-size: 14px;
+	border-radius: 12px;
+  background: #0b5527; 
+  border: none;
+	align-items: center;
+	width: 100px;
+  height: 40px;
+	color: #D1D1D4;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.registerr:hover{
+	width: 105px;
+  height: 45px;  
+}
+
+logoi{
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+logoi:hover{
+  font-size: 18px;
 }
