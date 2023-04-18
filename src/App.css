@@ -142,3 +142,10 @@ logoi{
 logoi:hover{
   font-size: 18px;
 }
+
+#inval{
+  color: red;
+  font-size:large;
+  font-weight: bolder;
+  padding: 2%;
+}

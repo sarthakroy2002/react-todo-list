@@ -37,12 +37,12 @@ function Login() {
 
   return (
     <form action="" onSubmit={e => loginUser(e)} className='boxer'>
-      {loginError && (
-        <div>Invalid Credentials!</div>
-      )}
       Email: <input className='txter' type="email" placeholder="email" value={email} onChange={e => setEmail(e.target.value)}/><br />
       Password:<input className='txter' type="password" placeholder="password" value={password} onChange={e => setPassword(e.target.value)}/><br />
       <button className='noter recc' type="submit">Login</button>
+      {loginError && (
+        <div id="inval">Invalid Credentials!</div>
+      )}
     </form>
   );
 }
