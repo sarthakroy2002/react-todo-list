@@ -24,7 +24,7 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', UserSchema);
 
-mongoose.connect('mongodb+srv://sarthak:nodeuser@cluster0.8hik3.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser:true, useUnifiedTopology:true});
+mongoose.connect('mongodb+srv://sarthak:nodeuser@cluster0.8hik3.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser:true, useUnifiedTopology:true, useCreateIndex: true});
 const db = mongoose.connection;
 db.on('error', console.log);
 
