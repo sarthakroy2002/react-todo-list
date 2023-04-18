@@ -29,13 +29,13 @@ const db = mongoose.connection;
 db.on('error', console.log);
 
 const app = express();
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8080
 app.use(express.static(path.join(__dirname + "/public")))
 app.use(cookieParser());
 app.use(bodyParser.json({extended:true}));
 app.use(cors({
   credentials:true,
-  origin: 'http://localhost:3000',
+  origin: 'http://localhost:8080',
 }));
 
 app.get('/', (req, res) => {
