@@ -63,7 +63,7 @@ ul li{
 .noter{
   font-size: 14px;
 	border-radius: 12px;
-  background: #3D1C4E; 
+  background: #2c1438; 
   border: none;
 	align-items: center;
 	width: 140px;
@@ -80,6 +80,10 @@ ul li{
   height: 50px;
   font-size: medium;
   border-radius: 10px; 
+}
+
+.txter:focus{
+  background-color: #d9cbf3;
 }
 
 .recc{
